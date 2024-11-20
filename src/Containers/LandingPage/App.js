@@ -2,6 +2,7 @@ import logo from '../../logo.svg';
 import css from './App.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,15 +55,41 @@ function App() {
       </main>
 
       <footer className={css.footer}>
-        <p>© 2024 Your Company. All rights reserved.</p>
-        <a
-          className={css.App_link}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className={css.footer_content}>
+          <div className={css.social_links}>
+            <h3>Follow Us</h3>
+            <div className={css.social_icons}>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+            </div>
+          </div>
+
+          <div className={css.footer_center}>
+            <p>© 2024 Your Company. All rights reserved.</p>
+          </div>
+
+          <div className={css.site_links}>
+            <h3>Quick Links</h3>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms of Service</Link></li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
   );
