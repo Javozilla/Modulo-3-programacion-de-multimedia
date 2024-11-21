@@ -7,13 +7,16 @@ import {
 } from './Containers';
 
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Landing_page />
+      <Routes>
+        <Route path="/" element={<Landing_page />} />
+        <Route path="/about" element={<AboutUsPage />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
