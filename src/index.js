@@ -14,7 +14,6 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App />} />
         <Route path="/AboutUsPage/AboutUsPage.js" element={<AboutUsPage />} />
         <Route path="/ProductsPage/products.js" element={<ProductsPage />} />
         <Route path="/cartPage/cartIndex.js" element={<CartPage />} />
