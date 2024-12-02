@@ -1,5 +1,6 @@
-import { Navbar } from '../../Components/Navbar/Navbar';
-import { Footer } from '../../Components/Footer/Footer';
+import React from 'react';
+import { Navbar } from '../../Components/Navbar/Navbar.js';
+import { Footer } from '../../Components/Footer/Footer.js';
 
 const AboutUsPage = () => {
 return (
