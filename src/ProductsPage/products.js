@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import coffeeImage1 from '../../assets/coffee1.jpg';
 import coffeeImage2 from '../../assets/coffee2.jpg';
@@ -8,6 +8,15 @@ import coffeeImage5 from '../../assets/coffee5.jpg';
 import coffeeImage6 from '../../assets/coffee6.jpg';
 
 const ProductsPage = () => {
+    const [imageError, setImageError] = useState({}); // Track errors for each image
+
+    const handleImageError = (productId) => {
+        setImageError(prev => ({
+            ...prev,
+            [productId]: true
+        }));
+    };
+
     const products = [
         {
             id: 1,
@@ -78,11 +87,18 @@ const ProductsPage = () => {
                 <div className="products-grid">
                     {products.map((product) => (
                         <div key={product.id} className="product-card">
-                            <img 
-                                src={product.image} 
-                                alt={product.name} 
-                                className="product-image"
-                            />
+                            {imageError[product.id] ? (
+                                <div className="image-fallback">
+                                    <p>No image available</p>
+                                </div>
+                            ) : (
+                                <img 
+                                    src={product.image} 
+                                    alt={product.name} 
+                                    className="product-image"
+                                    onError={() => handleImageError(product.id)}
+                                />
+                            )}
                             <h3>{product.name}</h3>
                             <p>{product.description}</p>
                             <p className="price">${product.price}</p>
