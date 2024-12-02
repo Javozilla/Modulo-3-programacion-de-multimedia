@@ -43,8 +43,8 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/AboutUsPage/AboutUsPage">About Us</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/cart">Shopping Cart</Link></li>
+            <li><Link to="/ProdctsPage/prodcts.js">Products</Link></li>
+            <li><Link to="/cartPage/cartIndex">Shopping Cart</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
