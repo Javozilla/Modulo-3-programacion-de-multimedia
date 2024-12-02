@@ -1,9 +1,10 @@
-import { Header, Footer } from '../../Components';
+import { Navbar } from '../../Components/Navbar/Navbar';
+import { Footer } from '../../Components/Footer/Footer';
 
 const AboutUsPage = () => {
 return (
     <div>
-        <Header />
+        <Navbar />
         <div className="app__aboutus">
             <h1>About Us</h1>
             <p>Welcome to our cozy corner of coffee heaven. Since 2020, we've been crafting exceptional coffee experiences 
