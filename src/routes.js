@@ -8,10 +8,11 @@ import CartPage from './cartPage/cartIndex';
 const Routes = () => {
   return (
     <>
-      <Route path="/" element={<App />} />
-      <Route path="/about" element={<AboutUsPage />} />
-      <Route path="/products" element={<ProductsPage />} />
-      <Route path="/cart" element={<CartPage />} />
+        <Route path="/" element={<App />} />
+        <Route path="/Containers/LandingPage/App.js" element={<App />} />
+        <Route path="/Containers/AboutUsPage/AboutUsPage.js" element={<AboutUsPage />} />
+        <Route path="/Containers/ProductsPage/products.js" element={<ProductsPage />} />
+        <Route path="/Containers/cartPage/cartIndex.js" element={<CartPage />} />
     </>
   );
 };
