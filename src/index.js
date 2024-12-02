@@ -5,7 +5,6 @@ import App from './Containers/LandingPage/App';
 import AboutUsPage from './AboutUsPage/AboutUsPage';
 import CartPage from './cartPage/cartIndex';
 import ProductsPage from './ProductsPage/products';
-import App from './Containers/LandingPage/App';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductsPage from './ProductsPage/products';
 
