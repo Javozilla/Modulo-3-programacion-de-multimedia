@@ -15,7 +15,6 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/LandingPage/App.js" element={<Landing_page />} />
-        <Route path="/about" element={<AboutUsPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

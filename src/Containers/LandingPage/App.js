@@ -3,6 +3,9 @@ import css from './App.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import coffeeImage1 from '../../assets/coffee1.jpg';
+import coffeeImage2 from '../../assets/coffee2.jpg';
+import coffeeImage3 from '../../assets/coffee3.jpg';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,6 +43,8 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/AboutUsPage/AboutUsPage">About Us</Link></li>
             <li><Link to="/services">Services</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/cart">Shopping Cart</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -52,6 +57,35 @@ function App() {
           <p>{slides[currentSlide].text}</p>
         </div>
         <button onClick={nextSlide} className={css.carousel_button}>→</button>
+
+        <div className={css.products_section}>
+          <h2>Our Featured Products</h2>
+          <div className={css.products_container}>
+            <div className={css.product_card}>
+              <img src={coffeeImage1} alt="Colombian Coffee" className={css.product_image} />
+              <h3>Colombian Coffee</h3>
+              <p>Premium single-origin Colombian coffee beans</p>
+              <p className={css.price}>$14.99</p>
+              <button className={css.add_to_cart_btn}>Add to Cart</button>
+            </div>
+
+            <div className={css.product_card}>
+              <img src={coffeeImage2} alt="Ethiopian Coffee" className={css.product_image} />
+              <h3>Ethiopian Coffee</h3>
+              <p>Rich and aromatic Ethiopian blend</p>
+              <p className={css.price}>$16.99</p>
+              <button className={css.add_to_cart_btn}>Add to Cart</button>
+            </div>
+
+            <div className={css.product_card}>
+              <img src={coffeeImage3} alt="House Blend" className={css.product_image} />
+              <h3>House Blend</h3>
+              <p>Our signature house blend coffee</p>
+              <p className={css.price}>$12.99</p>
+              <button className={css.add_to_cart_btn}>Add to Cart</button>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer className={css.footer}>

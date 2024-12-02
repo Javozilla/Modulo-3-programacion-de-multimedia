@@ -23,6 +23,15 @@ const CartIndex = () => {
 
     const [wishlist, setWishlist] = useState([]);
 
+    const [imageError, setImageError] = useState({});
+
+    const handleImageError = (itemId) => {
+        setImageError(prev => ({
+            ...prev,
+            [itemId]: true
+        }));
+    };
+
     // Cart functions
     const removeFromCart = (itemId) => {
         setCartItems(cartItems.filter(item => item.id !== itemId));
@@ -52,6 +61,18 @@ const CartIndex = () => {
 
     return (
         <div className="cart-page">
+            <nav className="app__navbar">
+                <div className="app__navbar-logo">
+                    <h1>LOGO</h1>
+                </div>
+                <ul className="app__navbar-links">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/products">Products</Link></li>
+                    <li><Link to="/cart">🛒 Cart</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                </ul>
+            </nav>
             <h1>Shopping Cart</h1>
             
             {/* Cart Items */}
@@ -63,7 +84,18 @@ const CartIndex = () => {
                     <div className="cart-items">
                         {cartItems.map(item => (
                             <div key={item.id} className="cart-item">
-                                <img src={item.image} alt={item.name} className="item-image" />
+                                {imageError[item.id] ? (
+                                    <div className="image-fallback">
+                                        <p>No image available</p>
+                                    </div>
+                                ) : (
+                                    <img 
+                                        src={item.image} 
+                                        alt={item.name} 
+                                        className="item-image"
+                                        onError={() => handleImageError(item.id)}
+                                    />
+                                )}
                                 <div className="item-details">
                                     <h3>{item.name}</h3>
                                     <p>${item.price}</p>
@@ -96,7 +128,18 @@ const CartIndex = () => {
                     <div className="wishlist-items">
                         {wishlist.map(item => (
                             <div key={item.id} className="wishlist-item">
-                                <img src={item.image} alt={item.name} className="item-image" />
+                                {imageError[item.id] ? (
+                                    <div className="image-fallback">
+                                        <p>No image available</p>
+                                    </div>
+                                ) : (
+                                    <img 
+                                        src={item.image} 
+                                        alt={item.name} 
+                                        className="item-image"
+                                        onError={() => handleImageError(item.id)}
+                                    />
+                                )}
                                 <div className="item-details">
                                     <h3>{item.name}</h3>
                                     <p>${item.price}</p>
