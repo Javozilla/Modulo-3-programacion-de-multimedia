@@ -10,12 +10,7 @@ import coffeeImage3 from '../../assets/coffee3.jpeg';
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [imageError, setImageError] = useState(false);
   
-  const handleImageError = () => {
-    setImageError(true);
-  };
-
   const slides = [
     { image: logo, text: 'Slide 1' },
     { image: logo, text: 'Slide 2' },
