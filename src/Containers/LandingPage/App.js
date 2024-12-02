@@ -38,10 +38,10 @@ function App() {
         <nav className={`${css.nav_menu} ${isMenuOpen ? css.open : ''}`}>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/AboutUsPage/AboutUsPage">About Us</Link></li>
+            <li><Link to="/AboutUsPage/AboutUsPage.js">About Us</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><Link to="/ProdctsPage/prodcts.js">Products</Link></li>
-            <li><Link to="/cartPage/cartIndex">Shopping Cart</Link></li>
+            <li><Link to="/ProductsPage/products.js">Products</Link></li>
+            <li><Link to="/cartPage/cartIndex.js">Shopping Cart</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
