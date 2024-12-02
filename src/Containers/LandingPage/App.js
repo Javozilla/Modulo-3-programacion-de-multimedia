@@ -3,14 +3,19 @@ import css from './App.module.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import coffeeImage1 from '../../assets/coffee1.jpg';
-import coffeeImage2 from '../../assets/coffee2.jpg';
-import coffeeImage3 from '../../assets/coffee3.jpg';
+import coffeeImage1 from '../../assets/coffee1.jpeg';
+import coffeeImage2 from '../../assets/coffee2.jpeg';
+import coffeeImage3 from '../../assets/coffee3.jpeg';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
   
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
   const slides = [
     { image: logo, text: 'Slide 1' },
     { image: logo, text: 'Slide 2' },
