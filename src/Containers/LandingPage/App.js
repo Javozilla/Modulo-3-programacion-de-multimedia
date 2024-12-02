@@ -9,9 +9,18 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const slides = [
-    { image: logo, text: 'Slide 1' },
-    { image: logo, text: 'Slide 2' },
-    { image: logo, text: 'Slide 3' },
+    { 
+      image: "/assets/coffee1.jpeg", 
+      text: 'Premium Colombian Coffee' 
+    },
+    { 
+      image: "/assets/coffee2.jpeg", 
+      text: 'Ethiopian Blend' 
+    },
+    { 
+      image: "/assets/coffee3.jpeg", 
+      text: 'House Blend Special' 
+    },
   ];
 
   const nextSlide = () => {
@@ -39,7 +48,6 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/AboutUsPage/AboutUsPage.js">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
             <li><Link to="/ProductsPage/products.js">Products</Link></li>
             <li><Link to="/cartPage/cartIndex.js">Shopping Cart</Link></li>
             <li><Link to="/contact">Contact</Link></li>
@@ -113,11 +121,10 @@ function App() {
             <h3>Quick Links</h3>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/AboutUsPage/AboutUsPage.js">About Us</Link></li>
+              <li><Link to="/ProductsPage/products.js">Products</Link></li>
+              <li><Link to="/cartPage/cartIndex.js">Shopping Cart</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
