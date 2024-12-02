@@ -26,7 +26,7 @@ function App() {
     <div className={css.App}>
       <header className={css.App_header}>
         <div className={css.header_content}>
-          <h1>Welcome to Our Website</h1>
+          <h1>Welcome to Our coffe shop</h1>
           <button 
             className={css.menu_button}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
