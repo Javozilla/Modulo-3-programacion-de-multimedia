@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import coffeeImage1 from '../../assets/coffee1.jpg';
-import coffeeImage2 from '../../assets/coffee2.jpg';
-import coffeeImage3 from '../../assets/coffee3.jpg';
-import coffeeImage4 from '../../assets/coffee4.jpg';
-import coffeeImage5 from '../../assets/coffee5.jpg';
-import coffeeImage6 from '../../assets/coffee6.jpg';
+import coffeeImage1 from '../../assets/coffee1.jpeg';
+import coffeeImage2 from '../../assets/coffee2.jpeg';
+import coffeeImage3 from '../../assets/coffee3.jpeg';
+import coffeeImage4 from '../../assets/coffee4.jpeg';
+import coffeeImage5 from '../../assets/coffee5.jpeg';
+import coffeeImage6 from '../../assets/coffee6.jpeg';
 
 const ProductsPage = () => {
     const [imageError, setImageError] = useState({}); // Track errors for each image
