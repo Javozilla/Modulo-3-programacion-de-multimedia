@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import coffeeImage1 from '../../assets/coffee1.jpeg';
-import coffeeImage2 from '../../assets/coffee2.jpeg';
-import coffeeImage3 from '../../assets/coffee3.jpeg';
-import coffeeImage4 from '../../assets/coffee4.jpeg';
-import coffeeImage5 from '../../assets/coffee5.jpeg';
-import coffeeImage6 from '../../assets/coffee6.jpeg';
 
 const ProductsPage = () => {
     const [imageError, setImageError] = useState({}); // Track errors for each image
@@ -23,42 +17,42 @@ const ProductsPage = () => {
             name: "Colombian Coffee",
             description: "Premium single-origin Colombian coffee beans",
             price: 14.99,
-            image: coffeeImage1
+            image: "/assets/coffee1.jpeg"
         },
         {
             id: 2,
             name: "Ethiopian Coffee",
             description: "Rich and aromatic Ethiopian blend",
             price: 16.99,
-            image: coffeeImage2
+            image: "/assets/coffee2.jpeg"
         },
         {
             id: 3,
             name: "House Blend",
             description: "Our signature house blend coffee",
             price: 12.99,
-            image: coffeeImage3
+            image: "/assets/coffee3.jpeg"
         },
         {
             id: 4,
             name: "Brazilian Santos",
             description: "Smooth and mild Brazilian coffee beans",
             price: 15.99,
-            image: coffeeImage4
+            image: "/assets/coffee4.jpeg"
         },
         {
             id: 5,
             name: "Dark Roast Special",
             description: "Bold and intense dark roasted blend",
             price: 13.99,
-            image: coffeeImage5
+            image: "/assets/coffee5.jpeg"
         },
         {
             id: 6,
             name: "Vanilla Flavored",
             description: "Sweet and aromatic vanilla-infused coffee",
             price: 17.99,
-            image: coffeeImage6
+            image: "/assets/coffee6.jpeg"
         }
     ];
 
