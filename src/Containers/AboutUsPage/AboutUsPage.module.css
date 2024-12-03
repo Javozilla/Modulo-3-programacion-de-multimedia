@@ -1,0 +1,54 @@
+.about-us-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.about-us-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-us-header h1 {
+    font-size: 2.5rem;
+    color: #2c5282; /* Darker color for headings */
+}
+
+.about-us-header p {
+    font-size: 1.2rem;
+    color: #666; /* Gray color for text */
+    max-width: 800px;
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.about-us-content img {
+    width: 100%;
+    max-width: 600px; /* Limit the image size */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.about-us-content p {
+    font-size: 1rem;
+    color: #444; /* Darker gray for body text */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px;
+    text-align: center; /* Center the text */
+}
+
+.about-us-footer {
+    margin-top: auto; /* Push footer to the bottom */
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #2c5282; /* Dark background for footer */
+    color: white; /* White text for contrast */
+}
