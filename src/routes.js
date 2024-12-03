@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import LandingPage from './Containers/LandingPage';
-import ProductsPage from './Containers/ProductsPage';
+import LandingPage from './Containers/LandingPage/App';
+import ProductsPage from './Containers/ProductsPage/products';
 import CartIndex from './Containers/cartPage/cartIndex';
-import AboutUsPage from './Containers/AboutUsPage';
+import AboutUsPage from './Containers/AboutUsPage/AboutUsPage';
 
 const AppRoutes = () => {
     return (
