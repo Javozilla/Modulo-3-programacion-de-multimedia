@@ -1,17 +1,17 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import App from './Containers/LandingPage/App';
-import AboutUsPage from './Containers/AboutUsPage/AboutUsPage';
-import ProductsPage from './Containers/ProductsPage/products';
-import CartPage from './Containers/cartPage/cartIndex';
+import App from './';
+import AboutUsPage from './Containers';
+import ProductsPage from './Containers';
+import CartPage from './Containers';
 
 const Routes = () => {
   return (
     <>
         <Route path="/" element={<App />} />
-        <Route path="/about" element={<AboutUsPage />} />
-        <Route path="/products" element={<ProductsPage />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route path="/AboutUsPage" element={<AboutUsPage />} />
+        <Route path="/ProductsPage" element={<ProductsPage />} />
+        <Route path="/cartPage" element={<CartPage />} />
     </>
   );
 };
