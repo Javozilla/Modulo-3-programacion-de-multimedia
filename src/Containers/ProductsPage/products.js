@@ -2,16 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './productsStyles.css';
 
-function App() {
-    return (
-        <div>
-            <Routes>
-                {/* Other routes */}
-                <Route path="/products" element={<ProductsPage />} />
-            </Routes>
-        </div>
-    );
-}
 
 
 const ProductsPage = () => {
