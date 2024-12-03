@@ -1,25 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import { 
-  createBrowserRouter,
-  RouterProvider,
- } from 'react-router-dom';
-/* import {
-  AboutUsPage,
-  ProductsPage,
-  CartPage,
- } from './Containers'; */
-import reportWebVitals from './reportWebVitals';
-import routes from './routes';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes'; // Importing the routes
 
-
-const router = createBrowserRouter(routes);
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+// Rendering the application
+ReactDOM.render(
+    <BrowserRouter>
+        <AppRoutes /> {/* Main routing component */}
+    </BrowserRouter>,
+    document.getElementById('root') // The root element in the HTML
 );
-
-reportWebVitals();

@@ -1,20 +1,21 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import App from './';
-import AboutUsPage from './Containers';
-import ProductsPage from './Containers';
-import CartPage from './Containers';
+import { Routes, Route } from 'react-router-dom';
+import Home from './containers/Home';
+import ProductsPage from './containers/ProductsPage';
+import CartIndex from './containers/cartPage/cartIndex';
+import AboutUsPage from './containers/AboutUsPage';
+import NotFound from './containers/NotFound';
 
-const Routes = () => {
-  return (
-    <>
-        <Route path="/" element={<App />} />
-        <Route path="/AboutUsPage" element={<AboutUsPage />} />
-        <Route path="/ProductsPage" element={<ProductsPage />} />
-        <Route path="/cartPage" element={<CartPage />} />
-        <Route path="/LandingPage" element={<LandingPage />} />
-    </>
-  );
+const AppRoutes = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/cart" element={<CartIndex />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    );
 };
 
-export default Routes; 
+export default AppRoutes; 
