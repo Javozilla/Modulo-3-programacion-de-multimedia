@@ -4,7 +4,6 @@ import LandingPage from './Containers/LandingPage';
 import ProductsPage from './Containers/ProductsPage';
 import CartIndex from './Containers/cartPage/cartIndex';
 import AboutUsPage from './Containers/AboutUsPage';
-import NotFound from './Containers/NotFound';
 
 const AppRoutes = () => {
     return (
